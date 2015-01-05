@@ -72,7 +72,9 @@ dl.inline dd{margin-left:0}
 dl.inline dt,dl.inline dd{display:inline-block}
 dl.inline dt:after{content:";"}
 dl.inline dd:after{content:"."}
-.center-text{text-align: center}
+.center-text{text-align:center}
+.justify-text{text-align:justify}
+img.valign{margin-bottom:0.4em;margin-top:0.4em}
 .hidden{display:none !important;visibility:hidden}
 .invisible{visibility:hidden}
 /*==========================*/
@@ -259,4 +261,83 @@ tr,img{page-break-inside:avoid}
 img{max-width:100% !important}
 p,h2,h3{orphans:3;widows:3}
 h2,h3{page-break-after:avoid}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==========================*/
+/* placeholder stuff DELETE! */
+/*
+.fullscreenimage {
+    background:url("../images/hair-480x320.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+@media screen and (max-width: 1920px) { 
+.fullscreenimage {
+    background:url("../images/hair-1920x1080.jpg") no-repeat center center fixed;
+}
+}
+@media screen and (max-width: 1366px) { 
+.fullscreenimage {
+    background:url("../images/hair-1366x768.jpg") no-repeat center center fixed;
+}
+}
+@media screen and (max-width: 1024px) { 
+.fullscreenimage {
+    background:url("../images/hair-1024x768.jpg") no-repeat center center fixed;
+}
+}
+*/
+.gt-480 .fullscreenimage {
+    background:url("../images/hair-800.jpg") no-repeat center center fixed;
+}
+.gt-800 .fullscreenimage {
+    background:url("../images/hair-1200.jpg") no-repeat center center fixed;
+}
+.gt-1200 .fullscreenimage {
+    background:url("../images/hair-1440.jpg") no-repeat center center fixed;
+}
+.gt-1440 .fullscreenimage {
+    background:url("../images/hair-1920.jpg") no-repeat center center fixed;
+}
+.fullscreenimage {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
