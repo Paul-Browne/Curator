@@ -27,6 +27,6 @@ function typeScale(){var a=window,b=document,c=b.documentElement,d=b.getElements
 /* init. scripts */
 
 $(function() {
-  jaygrid();
+  $.jaygrid();
   typeScale();
 });
