@@ -2,14 +2,19 @@
 requires in the documents <head>
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600|Droid+Serif:400italic" rel="stylesheet" type="text/css">
 */
+
 @-ms-viewport{width:device-width}
+
 /* Avoiding FOUC */
+
 #loader{background:white;position:fixed;width:100%;height:100%;z-index:999}
 #loader.loaded{-webkit-animation:fouc .5s .5s;animation:fouc .5s .5s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}
 #byebye{-webkit-animation:fouc .5s;animation:fouc .5s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}
 @-webkit-keyframes fouc{from{opacity:1}to{opacity:0}}
 @keyframes fouc{from{opacity:1}to{opacity:0}}
+
 /* normalize */
+
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
@@ -44,7 +49,9 @@ input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
 input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}
 input[type="search"]{-webkit-appearance:textfield;}
 input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+
 /* custom resets */
+
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 fieldset{border:0;margin:0;padding:0}
 legend{border:0;padding:0}
@@ -68,7 +75,9 @@ ol ol ol{list-style-type:lower-roman}
 th::selection,th::-moz-selection{background:transparent;color:inherit}
 a,small,s,q,u,i,b,strike,strong,mark,abbr,def,cite,var,kbd,span,em,ins,del,code,samp{line-height:1em}
 p{-ms-word-break:break-all;-ms-word-wrap:break-all;word-break:break-word;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;-webkit-hyphenate-before:2;-webkit-hyphenate-after:3;hyphenate-lines:3}
+
 /* helper classes */
+
 .clearfix:before,.clearfix:after{display:table;content:" "}
 .clearfix:after{clear:both}
 dl.inline dd{margin-left:0}
@@ -80,6 +89,7 @@ dl.inline dd:after{content:"."}
 img.valign{margin-bottom:0.4em;margin-top:0.4em}
 .hidden{display:none !important;visibility:hidden}
 .invisible{visibility:hidden}
+
 /*==========================*/
 /* placeholder styles */
 
@@ -131,6 +141,7 @@ h6, .h6 {font-size: 0.615em; font-weight: 400 }
 
 /*==========================*/
 /* iconfont */
+
 @font-face{
   font-family:'iconfont';
   src:url('../fonts/iconfont.eot');
@@ -251,7 +262,68 @@ h6, .h6 {font-size: 0.615em; font-weight: 400 }
 .icon-paperclip:before{content:"\41"}
 
 /*==========================*/
+/* tables */
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+}
+.sortable th {
+    cursor:pointer;
+}
+.sortable th:after{
+    font-size:14px;
+    content:"b";
+    font-family:"iconfont";
+    padding-left:12px;
+}
+th.sorting-asc:after {
+    content:"[";
+}
+th.sorting-desc:after {
+    content:"]";
+}
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.table thead > tr > th,
+.table tbody > tr > th,
+.table tfoot > tr > th,
+.table thead > tr > td,
+.table tbody > tr > td,
+.table tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.428571429;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+.table thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dddddd;
+  text-align:left;
+}
+.table caption + thead tr:first-child th,
+.table colgroup + thead tr:first-child th,
+.table thead:first-child tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+.table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+.table .table {
+  background-color: #ffffff;
+}
+.table tbody > tr:hover {
+    background:rgba(0, 255, 0, 0.05);
+}
+
+/*==========================*/
 /* print */
+
 @media print{
 *,*:before,*:after{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}
 a,a:visited{text-decoration:underline}
@@ -302,9 +374,6 @@ h2,h3{page-break-after:avoid}
 
 /*==========================*/
 /* placeholder stuff DELETE! */
-
-
-
 
 .fullscreenimage {
     background:url("../images/hair-480x320.jpg") no-repeat center center fixed;
