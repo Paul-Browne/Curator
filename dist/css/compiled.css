@@ -1,3 +1,7 @@
+/* 
+requires in the documents <head>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600|Droid+Serif:400italic" rel="stylesheet" type="text/css">
+*/
 @-ms-viewport{width:device-width}
 /* Avoiding FOUC */
 #loader{background:white;position:fixed;width:100%;height:100%;z-index:999}
@@ -50,9 +54,8 @@ table{border-collapse:collapse;border-spacing:0}
 td,th{padding:0}
 u,ins{border-bottom:1px solid #4d4d4d;text-decoration:none}
 s,strike,del{text-decoration:line-through}
-i,dfn,em,cite,var{font-style: italic}
 b,strong{font-weight:600}
-em,cite,i,dfn,var{font-family:'Droid Serif',serif;font-weight:400}
+em,cite,i,dfn,var,blockquote,address{font-family:'Droid Serif',serif;font-weight:400;font-style:italic}
 q:before,q:after{font-size:1.15em}
 q:before{content:'\201c'}
 q:after{content:'\201d'}
@@ -363,191 +366,4 @@ only screen and (min-width: 456px) and (min-resolution: 288dpi) {
 }
 }
 
-
-
-/*
-
-.fullscreenimage {
-    background:url("../images/hair-1920x1080.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-@media
-only screen and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (max-width: 1280px) and (min-resolution: 144dpi),
-only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 2),
-only screen and (max-width: 960px) and (min-resolution: 192dpi),
-only screen and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 3),
-only screen and (max-width: 640px) and (min-resolution: 288dpi) { 
-.fullscreenimage {
-    background-image: url("../images/hair-1920x1080.jpg");
-}
-}
-@media
-only screen and (max-width: 1366px) and (-webkit-max-device-pixel-ratio: 1.5),
-only screen and (max-width: 1366px) and (max-resolution: 144dpi),
-only screen and (max-width: 910px) and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (max-width: 910px) and (min-resolution: 144dpi),
-only screen and (max-width: 683px) and (-webkit-min-device-pixel-ratio: 2),
-only screen and (max-width: 683px) and (min-resolution: 192dpi),
-only screen and (max-width: 455px) and (-webkit-min-device-pixel-ratio: 3),
-only screen and (max-width: 455px) and (min-resolution: 288dpi) { 
-.fullscreenimage {
-    background-image: url("../images/hair-1366x768.jpg");
-}
-}
-@media
-only screen and (max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1.5),
-only screen and (max-width: 1024px) and (max-resolution: 144dpi),
-only screen and (max-width: 682px) and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (max-width: 682px) and (min-resolution: 144dpi),
-only screen and (max-width: 512px) and (-webkit-min-device-pixel-ratio: 2),
-only screen and (max-width: 512px) and (min-resolution: 192dpi),
-only screen and (max-width: 341px) and (-webkit-min-device-pixel-ratio: 3),
-only screen and (max-width: 341px) and (min-resolution: 288dpi) { 
-.fullscreenimage {
-    background-image:url("../images/hair-1024x768.jpg");
-}
-}
-@media
-only screen and (max-width: 768px) and (-webkit-max-device-pixel-ratio: 1.5),
-only screen and (max-width: 768px) and (max-resolution: 144dpi),
-only screen and (max-width: 512px) and (-webkit-max-device-pixel-ratio: 2),
-only screen and (max-width: 512px) and (max-resolution: 192dpi),
-only screen and (max-width: 384px) and (-webkit-max-device-pixel-ratio: 3),
-only screen and (max-width: 384px) and (max-resolution: 288dpi),
-only screen and (max-width: 256px) and (-webkit-min-device-pixel-ratio: 3),
-only screen and (max-width: 256px) and (min-resolution: 288dpi) {
-.fullscreenimage {
-    background-image: url("../images/hair-768x1024.jpg");
-}
-}
-@media
-only screen and (max-width: 480px) and (-webkit-max-device-pixel-ratio: 1.5),
-only screen and (max-width: 480px) and (max-resolution: 144dpi),
-only screen and (max-width: 320px) and (-webkit-max-device-pixel-ratio: 2),
-only screen and (max-width: 320px) and (max-resolution: 192dpi),
-only screen and (max-width: 240px) and (-webkit-max-device-pixel-ratio: 3),
-only screen and (max-width: 240px) and (max-resolution: 288dpi),
-only screen and (max-width: 160px) and (-webkit-min-device-pixel-ratio: 3),
-only screen and (max-width: 160px) and (min-resolution: 288dpi) {
-.fullscreenimage {
-    background-image: url("../images/hair-480x320.jpg");
-}
-}
-
-*/
-
-
-
-/*
-
-@media only screen and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5) { 
-.fullscreenimage {
-    background-image: url("../images/hair-1920x1080.jpg");
-}
-}
-@media only screen and (max-width: 911px) and (-webkit-min-device-pixel-ratio: 1.5) { 
-.fullscreenimage {
-    background-image: url("../images/hair-1366x768.jpg");
-}
-}
-@media only screen and (max-width: 683px) and (-webkit-min-device-pixel-ratio: 1.5) { 
-.fullscreenimage {
-    background-image: url("../images/hair-1024x768.jpg");
-}
-}
-@media only screen and (max-width: 512px) and (-webkit-min-device-pixel-ratio: 1.5) { 
-.fullscreenimage {
-    background-image: url("../images/hair-768x1024.jpg");
-}
-}
-@media only screen and (max-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5) { 
-.fullscreenimage {
-    background-image: url("../images/hair-480x320.jpg");
-}
-}
-
-
-
-@media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 2) { 
-.fullscreenimage {
-    background-image: url("../images/hair-1920x1080.jpg");
-}
-}
-@media only screen and (max-width: 683px) and (-webkit-min-device-pixel-ratio: 2) { 
-.fullscreenimage {
-    background-image: url("../images/hair-1366x768.jpg");
-}
-}
-@media only screen and (max-width: 512px) and (-webkit-min-device-pixel-ratio: 2) { 
-.fullscreenimage {
-    background-image: url("../images/hair-1024x768.jpg");
-}
-}
-@media only screen and (max-width: 374px) and (-webkit-min-device-pixel-ratio: 2) { 
-.fullscreenimage {
-    background-image: url("../images/hair-768x1024.jpg");
-}
-}
-@media only screen and (max-width: 240px) and (-webkit-min-device-pixel-ratio: 2) { 
-.fullscreenimage {
-    background-image: url("../images/hair-480x320.jpg");
-}
-}
-
-@media only screen and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 3) { 
-.fullscreenimage {
-    background-image: url("../images/hair-1920x1080.jpg");
-}
-}
-@media only screen and (max-width: 456px) and (-webkit-min-device-pixel-ratio: 3) { 
-.fullscreenimage {
-    background-image: url("../images/hair-1366x768.jpg");
-}
-}
-@media only screen and (max-width: 342px) and (-webkit-min-device-pixel-ratio: 3) { 
-.fullscreenimage {
-    background-image: url("../images/hair-1024x768.jpg");
-}
-}
-@media only screen and (max-width: 256px) and (-webkit-min-device-pixel-ratio: 3) { 
-.fullscreenimage {
-    background-image: url("../images/hair-768x1024.jpg");
-}
-}
-@media only screen and (max-width: 160px) and (-webkit-min-device-pixel-ratio: 3) { 
-.fullscreenimage {
-    background-image: url("../images/hair-480x320.jpg");
-}
-}
-
-*/
-
-
-
-/*
-.fullscreenimage {
-    background:url("../images/hair-1920x1080.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-    
-
-.gte-480 .fullscreenimage {
-    background-image:url("../images/hair-800.jpg");
-}
-.gte-800 .fullscreenimage {
-    background-image:url("../images/hair-1200.jpg");
-}
-.gte-1200 .fullscreenimage {
-    background:url("../images/hair-1440.jpg");
-}
-.gte-1440 .fullscreenimage {
-    background-image:url("../images/hair-1920.jpg");
-}*/
 
