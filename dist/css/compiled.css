@@ -320,6 +320,9 @@ th.sorting-desc:after {
 .table tbody > tr:hover {
     background:rgba(0, 255, 0, 0.05);
 }
+table.center-text th {
+  text-align:center;
+} 
 
 /*==========================*/
 /* print */
