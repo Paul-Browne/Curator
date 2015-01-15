@@ -326,6 +326,26 @@ table.center-text th {
 
 /* iCheck plugin Flat skin, blue
 ----------------------------------- */
+ul.checklist {
+	list-style-type: none;
+	padding: 0;
+}
+.checklist li {
+	position: relative;
+	padding-left: 40px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+.checklist label {
+	padding: 0;
+}
+
+.icheckbox_flat-blue, .iradio_flat-blue {
+	position: absolute;
+	left: 0;
+	top: 0px;
+}
+
 .icheckbox_flat-blue,
 .iradio_flat-blue {
     display: inline-block;
