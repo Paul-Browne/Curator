@@ -327,14 +327,16 @@ table.center-text th {
 /* iCheck plugin Flat skin, blue
 ----------------------------------- */
 ul.checklist {
+	font-size:16px;
+	line-height:20px;
 	list-style-type: none;
 	padding: 0;
 }
 .checklist li {
 	position: relative;
 	padding-left: 40px;
-	margin-top: 4px;
-	margin-bottom: 4px;
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 .checklist label {
 	padding: 0;
