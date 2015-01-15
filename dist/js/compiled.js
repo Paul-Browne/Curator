@@ -24,5 +24,8 @@ $(function() {
   $.jaygrid();
   typeScale();
   $("table").stupidtable();
-  $('input').iCheck();
+    $('input').iCheck({
+    checkboxClass: 'icheckbox_flat-blue',
+    radioClass: 'iradio_flat-blue'
+  });
 });
