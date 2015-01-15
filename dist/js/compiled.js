@@ -24,4 +24,5 @@ $(function() {
   $.jaygrid();
   typeScale();
   $("table").stupidtable();
+  $('input').iCheck();
 });
