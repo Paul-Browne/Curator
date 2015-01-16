@@ -18,5 +18,11 @@ A boilerplate framework curating some of the best practices, plugins, styles and
 |A Date & Time Picker|[website](http://amsul.ca/pickadate.js/)|[pickdate](https://github.com/amsul/pickadate.js)|
 |Collapsable content|[website](http://webcloud.se/jQuery-Collapse/)|[jQuery Collapse](https://github.com/danielstocks/jQuery-Collapse)|
 |Sortable Tables|[website](http://joequery.github.io/Stupid-Table-Plugin/)|[stupidtable](https://github.com/joequery/Stupid-Table-Plugin)|
-|Auto-hiding sticky navigation|[website](http://wicky.nillia.ms/headroom.js/)|[headroom](https://github.com/WickyNilliams/headroom.js)|
+|Auto-hiding sticky header|[website](http://wicky.nillia.ms/headroom.js/)|[headroom](https://github.com/WickyNilliams/headroom.js)|
 |Auto expanding `<textarea>`|[website](http://amsul.ca/elasticize.js/)|[elasticize](https://github.com/amsul/elasticize.js)|
+|Nice LightBox|[website](#)|[website](#)|
+|Responsive Navbar|[website](#)|[website](#)|
+|Lazyloading images|[website](#)|[website](#)|
+|Responsive loading Images|[website](#)|[website](#)|
+|Better Select Boxes|[website](#)|[website](#)|
+|A Responsive Image Slider|[website](http://responsiveslides.com/)|[ResponsiveSlides](https://github.com/viljamis/ResponsiveSlides.js)|
