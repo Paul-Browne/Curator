@@ -33,6 +33,7 @@
         </script>
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//rawgit.com/WickyNilliams/headroom.js/master/src/Headroom.js"></script>
         <script src="js/compiled.js"></script>
     </head>
     <body class="justify-text">
@@ -43,6 +44,10 @@
             var a=document.getElementsByTagName("body")[0],b=document.createElement("div");a.appendChild(b),b.id="loader",b.className="loading";var c=document.getElementById("loader");window.onload=function(){c.className="loaded",setTimeout(function(){a.removeChild(c)},1e3)},window.onbeforeunload=function(){a.id="byebye"};
         </script>
 
+        <header id="header">
+            <h2>This is an example of a sticky header, using headroom.js</h2>
+        </header>
+        
         <h1 class="center-text">Hello <span class="icon-earth" style="color:green"></span></h1>
         
         <div class="d-center-5-6">
@@ -154,10 +159,28 @@
                 </div>
             </div>
         </div>
-        <h1><a href="#">hello</a></h1>
-        <h2><a href="#">hello</a></h2>
-        <h3><a href="#">hello</a></h3>
-        <h4><a href="#">hello</a></h4>
+
+        <div class="datepicking">
+            <form>
+                <fieldset>
+                    <div>
+                        <input class="datepicker" type="text" placeholder="Try me&hellip;">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <div>
+                        <input class="timepicker" type="text" placeholder="Try me&hellip;">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <textarea></textarea>
+                </fieldset>
+                
+            </form>
+        </div>
+
         
 
 
