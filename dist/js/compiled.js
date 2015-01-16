@@ -30,7 +30,6 @@ $(function() {
   typeScale();
   $.jaygrid();
   $("table").stupidtable();
-  //$(".collapse").collapse();
   $(".video").fitVids();
   $('input').iCheck({
     checkboxClass: 'icheckbox_flat-blue',

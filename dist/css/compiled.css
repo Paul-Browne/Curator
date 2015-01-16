@@ -111,6 +111,12 @@ a, a:visited {
     color:#37F;
 }
 
+h1 a, .h1 a, a.h1, h1 a:visited, .h1 a:visited, a.h1:visited,
+h2 a, .h2 a, a.h2, h2 a:visited, .h2 a:visited, a.h2:visited,
+h3 a, .h3 a, a.h3, h3 a:visited, .h3 a:visited, a.h3:visited {
+    color: inherit;
+}
+
 a:link, a:visited:link {
 -webkit-tap-highlight-color: rgba(0,0,0,0.3)
 }
@@ -122,6 +128,7 @@ p a, p a:visited {
 
 p a:hover, p a:visited:hover,
 h4 a:hover, h4 a:visited:hover,
+.h4 a:hover, .h4 a:visited:hover,
 a.h4:hover, a.h4:visited:hover {
 	border-bottom: 1px solid #37f;
 }
@@ -398,6 +405,27 @@ ul.checklist {
         -webkit-background-size: 176px 22px;
         background-size: 176px 22px;
     }
+}
+
+/*==========================*/
+/* collapsable */
+
+[data-collapse-summary] a {
+    color: inherit;
+}
+
+[data-collapse-summary] a:hover {
+    border-bottom: none;
+}
+
+[data-collapse-summary] a:after {
+    vertical-align: middle;
+    font-family: iconfont;
+    content: "\2e";
+}
+
+[data-collapse-summary].open a:after {
+    content: "\2c";
 }
 
 /*==========================*/
