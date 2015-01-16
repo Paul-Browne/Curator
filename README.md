@@ -14,6 +14,7 @@ A boilerplate framework curating some of the best practices, plugins, styles and
 |A Simple grid system|N/A|[jaygrid](https://github.com/Paul-Browne/jaygrid)|
 |Responsive Videos|[website](http://fitvidsjs.com/)|[fitvids](https://github.com/davatron5000/FitVids.js)|
 |Better Check and Radio boxes|[website](http://fronteed.com/iCheck/)|[icheck](https://github.com/fronteed/iCheck/)|
+|Tooltips|[website](http://kushagragour.in/lab/hint/)|[hint.css](https://github.com/chinchang/hint.css)|
 |A Date & Time Picker|[website](http://amsul.ca/pickadate.js/)|[pickdate](https://github.com/amsul/pickadate.js)|
 |Collapsable content|[website](http://webcloud.se/jQuery-Collapse/)|[jQuery Collapse](https://github.com/danielstocks/jQuery-Collapse)|
 |Sortable Tables|[website](http://joequery.github.io/Stupid-Table-Plugin/)|[stupidtable](https://github.com/joequery/Stupid-Table-Plugin)|
