@@ -32,8 +32,8 @@
             !function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile\/10\.0/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();
         </script>
         
-        <script src="//cdnjs.cloudflare.com/ajax/libs/labjs/2.0.3/LAB.min.js"></script>
-        <script src="js/assets.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/compiled.js"></script>
     </head>
     <body class="justify-text">
         <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
@@ -43,7 +43,7 @@
             var a=document.getElementsByTagName("body")[0],b=document.createElement("div");a.appendChild(b),b.id="loader",b.className="loading";var c=document.getElementById("loader");window.onload=function(){c.className="loaded",setTimeout(function(){a.removeChild(c)},1e3)},window.onbeforeunload=function(){a.id="byebye"};
         </script>
 
-        <header id="header" class="sticky">
+        <header id="header">
             <h3>This is an example of a sticky header, using headroom.js</h3>
         </header>
         
@@ -186,10 +186,7 @@
 
         
 
-        <script>
-            /* typeScale */
-            function typeScale(){var a=window,b=document,c=b.documentElement,d=b.getElementsByTagName("body")[0],e=a.innerWidth||c.clientWidth||d.clientWidth;d.style.fontSize=e/375+15+"px",d.style.lineHeight=e/8e3+1.4}window.addEventListener("resize",typeScale),typeScale;
-        </script>
+
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--<script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
