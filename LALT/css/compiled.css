@@ -89,6 +89,7 @@ dl.inline dd:after{content:"."}
 img.valign{margin-bottom:0.4em;margin-top:0.4em}
 .hidden{display:none !important;visibility:hidden}
 .invisible{visibility:hidden}
+.middlize{position:relative;display:block;}
 
 /*==========================*/
 /* placeholder styles */

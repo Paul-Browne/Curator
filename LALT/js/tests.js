@@ -39,27 +39,8 @@ $LAB
 	if ($('input[type="checkbox"],input[type="radio"]').length) {return "js/icheck.js"; }	
 	else {return null;}
 })
-.wait(function(){
-	$.jaygrid();
+.script(function(){
+	return "js/helper.js";	
 })
-.wait(function(){
-	$(".sortable").stupidtable();
-})
-.wait(function(){
-	$(".sticky").headroom();
-})
-.wait(function(){
-	$(".datepicker").pickadate();
-})
-.wait(function(){
-	$(".timepicker").pickatime();
-})
-.wait(function(){
-	$('textarea').elasticize();
-})
-.wait(function(){
-	$(".video").fitVids();
-})
-.wait(function(){
-	$('input').iCheck({checkboxClass: 'icheckbox_flat-blue',radioClass: 'iradio_flat-blue'});
-});
+.wait()
+.script("js/inits.js");
