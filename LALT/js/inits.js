@@ -1,0 +1,25 @@
+$LAB
+.wait(function(){
+	$.jaygrid();
+})
+.wait(function(){
+	$(".sortable").stupidtable();
+})
+.wait(function(){
+	$(".sticky").headroom();
+})
+.wait(function(){
+	$(".datepicker").pickadate();
+})
+.wait(function(){
+	$(".timepicker").pickatime();
+})
+.wait(function(){
+	$('textarea').elasticize();
+})
+.wait(function(){
+	$(".video").fitVids();
+})
+.wait(function(){
+	$('input').iCheck({checkboxClass: 'icheckbox_flat-blue',radioClass: 'iradio_flat-blue'});
+});
