@@ -18,8 +18,11 @@ $LAB
 	$('textarea').elasticize();
 })
 .wait(function(){
-	$(".video").fitVids();
+	$(".fitvid").fitVids();
 })
 .wait(function(){
 	$('input').iCheck({checkboxClass: 'icheckbox_flat-blue',radioClass: 'iradio_flat-blue'});
+})
+.wait(function(){
+	$('.focuspoint').focusPoint();
 });

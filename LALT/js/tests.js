@@ -16,15 +16,15 @@ $LAB
 	else {return null;}
 })
 .script(function(){
-	if ($('.datepicker,.timepicker').length) {return "js/picker.js"; }	
+	if ($('.datepicker,.timepicker').length) {return ["js/picker.js", "js/basepicker.css.js"]; }	
 	else {return null;}
 })
 .script(function(){
-	if ($('.datepicker').length) {return "js/datepicker.js"; }	
+	if ($('.datepicker').length) {return ["js/datepicker.js", "js/datepicker.css.js"]; }	
 	else {return null;}
 })
 .script(function(){
-	if ($('.timepicker').length) {return "js/timepicker.js"; }	
+	if ($('.timepicker').length) {return ["js/timepicker.js", "js/timepicker.css.js"]; }	
 	else {return null;}
 })
 .script(function(){
@@ -32,11 +32,19 @@ $LAB
 	else {return null;}
 })
 .script(function(){
-	if ($('.video').length) {return "js/fitvids.js"; }	
+	if ($('.fitvid').length) {return "js/fitvids.js"; }	
 	else {return null;}
 })
 .script(function(){
-	if ($('input[type="checkbox"],input[type="radio"]').length) {return "js/icheck.js"; }	
+	if ($('[data-hint]').length) {return "js/hint.css.js"; }	
+	else {return null;}
+})
+.script(function(){
+	if ($('.focuspoint').length) {return "js/focuspoint.js"; }	
+	else {return null;}
+})
+.script(function(){
+	if ($('input[type="checkbox"],input[type="radio"]').length) {return ["js/icheck.js", "js/icheck.css.js"]; }	
 	else {return null;}
 })
 .script(function(){
