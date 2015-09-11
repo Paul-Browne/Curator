@@ -35,11 +35,13 @@
 
 $(function() {
   init();
-  $("table").stupidtable();
+  $('input').iCheck({checkboxClass: 'icheckbox_flat-blue',radioClass: 'iradio_flat-blue'}); 
   $(".video").fitVids();
-  $('input').iCheck({checkboxClass: 'icheckbox_flat-blue',radioClass: 'iradio_flat-blue'});
   $("#header").headroom();
+  
+  /*
   $('.datepicker').pickadate();
   $('.timepicker').pickatime();
   $('textarea').elasticize();
+  */
 });
