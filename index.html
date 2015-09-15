@@ -54,9 +54,10 @@
         
         <!-- add your styles in here -->
         <link rel="stylesheet" href="css/compiled.css">
+        <link rel="stylesheet" href="css/docs.css">
         
         <!-- fonts - via google -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Libre+Baskerville:400italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Libre+Baskerville:400italic" rel="stylesheet" type="text/css">
         <!-- icon font -->
         
         <!-- initial-scale='1' bugfix for WP8 and IE10 -->
@@ -73,6 +74,7 @@
         
         <!-- add you scripts in here -->
         <script src="js/compiled.js"></script>
+        <script src="js/docs.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]><h1 class="center-text">Using an outdated browser makes your computer unsafe. <a href="http://browsehappy.com/">Upgrade your browser</a></h1><![endif]-->
@@ -80,117 +82,778 @@
         <!-- avoiding FOUC -->
         <script>!function(){var a=document.getElementsByTagName("body")[0],b=document.createElement("div");a.appendChild(b),b.id="loader",b.className="loading";var c=document.getElementById("loader");window.onload=function(){c.className="loaded",setTimeout(function(){a.removeChild(c)},1e3)},window.onbeforeunload=function(){a.id="byebye"}}();</script>
 
-		
-		<header id="header" class="sticky">
-            <h3 class="center-text">This is an example of a sticky header, using headroom.js</h3>
-        </header>
-        
-		<div class="fullscreen icovr">
-            <img src = "images/world-placeholder.jpg"
-            data-src = "<400:images/world-small.jpg,
-                        <800:images/world-medium.jpg,
-                        <1200:images/world-large.jpg,
-                        <1600:images/world-huge.jpg,
-                        >1600:images/world-massive.jpg" />
-            <div id="hello-world" class="middlize center-text">
-                <h1><em>Hello world!</em></h1><br>
-                <p>resize your browser</p>
+        <div class="fullscreen">
+            <div class="middlize center-text">
+                <h1><em>Curator</em></h1>
+                <h3 class="fw-300">A frontend framework with resources <del>stolen</del> curated from around the web.</h3>
+                <a class="button button-primary" href="https://github.com/Paul-Browne/Curator">Download</a>
+                <nav class="clearfix">
+                    <ul>
+                        <li><a>home</a></li>
+                        <li><a>elements</a>
+                            <ul>
+                                <li><a>Typography</a></li>
+                                <li><a>Grid</a></li>
+                                <li><a>Forms</a></li>
+                                <li><a>Buttons</a></li>
+                                <li><a>Tables</a></li>
+                                <li><a>Lists</a></li>
+                                <li><a>Slider</a></li>
+                                <li><a>Videos</a></li>
+                                <li><a>Pop overs</a></li>
+                                <li><a>Navigation</a></li>
+                                <li><a>Code</a></li>
+                                <li><a>Utilities</a></li>
+                            </ul>
+                        </li>
+                        <li><a>examples</a></li>
+                        <li><a>about</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-		
-		<hr>
-	
 
-		<pre><code>&lt;div class="fullscreen icovr"&gt;
-  &lt;img src = "images/world-placeholder.jpg"
-  data-src = "&lt;400:images/world-small.jpg,
-              &lt;800:images/world-medium.jpg,
-              &lt;1200:images/world-large.jpg,
-              &lt;1600:images/world-huge.jpg,
-              &gt;1600:images/world-massive.jpg" /&gt;
-  &lt;div id="hello-world" class="middlize center-text"&gt;
-    &lt;h1&gt;&lt;em&gt;Hello world!&lt;/em&gt;&lt;/h1&gt;&lt;br&gt;
-    &lt;p&gt;resize your browser&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-
-		<p>Above is an example of an inline image which;<br>
-		1. takes up the entire screen due to the class <code>fullscreen</code> on the container.<br>
-		2. fills the container and is centered both vertically and horizontally due to class <code>icovr</code> on the container.<br>
-		3. is responsive, the image will change depending on the container size and the resolution (ppi) of the device.</p>
-		<p>Above is also an example of some text which is vertically centered due to the class <code>middlize</code>. note: any element with a class of <code>middlize</code> must have a parent with height dimensions specified.</p>
-		<hr>
-		
-		
-		<ul class="checklist">
-			<li>
-				<label for="peas">Peas</label>
-				<input id="peas" type="checkbox">
-			</li>
-			
-			<li>
-				<input id="carrots" type="checkbox" checked>
-				<label for="carrots">Carrots</label>
-			</li>
-			
-			<li>
-				<label for="potatoes">Potatoes</label>    
-				<input id="potatoes" type="checkbox" checked>
-			</li>
-		</ul>
-		
-		<ul class="checklist">
-			<li>
-				<input id="male" type="radio" name="icheck">
-				<label for="male">Male</label>
-			</li>
-			<li>
-				<input id="female" type="radio" name="icheck">
-				<label for="female">Female</label>
-			 </li>
-		</ul>
-        
-		
-		<pre><code>  &lt;ul class="checklist"&gt;
-    &lt;li&gt;
-      &lt;label for="peas"&gt;Peas&lt;/label&gt;
-      &lt;input id="peas" type="checkbox"&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;input id="carrots" type="checkbox" checked&gt;
-      &lt;label for="carrots"&gt;Carrots&lt;/label&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;label for="potatoes"&gt;Potatoes&lt;/label&gt;    
-      &lt;input id="potatoes" type="checkbox" checked&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;ul class="checklist"&gt;
-    &lt;li&gt;
-      &lt;input id="male" type="radio" name="icheck"&gt;
-      &lt;label for="male"&gt;Male&lt;/label&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;input id="female" type="radio" name="icheck"&gt;
-      &lt;label for="female"&gt;Female&lt;/label&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;</code></pre>
-  
-  <hr>
-  
-        <div class="video tl-center-2-4">
-            <iframe src="//www.youtube.com/embed/j2tE-BCwZtw?rel=0" frameborder="0" allowfullscreen></iframe>
+        <!-- Typography -->
+        <div id="typography" class="tl-center-7-8">
+            <h4 class="fw-400">Typography</h4>
+            <p>Curator uses <a href="https://www.google.com/fonts/specimen/Open+Sans">Open Sans</a> for body copy (headings and paragraphs) with <a href="https://www.google.com/fonts/specimen/Libre+Baskerville">Libre Baskerville</a> for emphasis (italics), blockquotes and addresses.</p>
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Example</th>
+                        <th>font-size</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;h1&gt;</code></td>
+                        <td><h1>Hello World</h1></td>
+                        <td>2.643em</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;h2&gt;</code></td>
+                        <td><h2>Hello World</h2></td>
+                        <td>2.073em</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;h3&gt;</code></td>
+                        <td><h3>Hello World</h3></td>
+                        <td>1.626em</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;h4&gt;</code></td>
+                        <td><h4>Hello World</h4></td>
+                        <td>1.275em</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;h5&gt;</code></td>
+                        <td><h5>Hello World</h5></td>
+                        <td>0.784em</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;h6&gt;</code></td>
+                        <td><h6>Hello World</h6></td>
+                        <td>0.615em</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;p&gt;</code></td>
+                        <td><p>Hello World</p></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;a&gt;</code></td>
+                        <td><p><a href="#">Hello World</a></p></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;strong&gt;, &lt;b&gt;</code></td>
+                        <td><p><strong>Hello World</strong></p></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;em&gt;, &lt;i&gt;</code></td>
+                        <td><p><em>Hello World</em></p></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;del&gt;</code></td>
+                        <td><p><del>Hello World</del></p></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;ins&gt;</code></td>
+                        <td><p><ins>Hello World</ins></p></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;small&gt;</code></td>
+                        <td><p><small>Hello World</small></p></td>
+                        <td>75%</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;sub&gt;</code></td>
+                        <td><p>Hello <sub>World</sub></p></td>
+                        <td>65%</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;sup&gt;</code></td>
+                        <td><p>Hello <sup>World</sup></p></td>
+                        <td>65%</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;mark&gt;</code></td>
+                        <td><p><mark>Hello World</mark></p></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;q&gt;</code></td>
+                        <td><p><q>Hello World</q></p></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;code&gt;</code></td>
+                        <td><p><code>Hello World</code></p></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;abbr&gt;</code></td>
+                        <td><p><abbr title="Say Hello to the World!">Hello World</abbr></p></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="tl-col-1-3">
+                <h5>blockquotes</h5>
+                <blockquote>
+                    <p>My grandmother started walking five miles a day when she was sixty. She's ninety-seven now, and we don't know where the hell she is.</p>
+                    <p class="source">Ellen DeGeneres</p>
+                </blockquote>                
+            </div>
+            
+            <div class="tl-col-1-3">
+                <h5>Addresses</h5>
+                <address>
+                    <span class="icon-user"></span> Paul Browne<br>
+                    <span class="icon-home"></span> 123 fake street<br>
+                    <span class="icon-empty"></span> San Fransisco, CA 90210<br>
+                    <span class="icon-phone"></span> 01234 567 890
+                </address>
+            </div>
+            
+            <div class="tl-col-1-3">
+                <h5>Drop Caps</h5>
+                    <p><span class="initial">H</span>ello World! This is an example of an <em>initial</em> the first letter is capitalized and is the height of 2 rows, text in the next lines will wrap around the initialed letter</p>
+                    <p><span class="initial"><em>G</em></span>oodbye World! This is another example of an <em>initial</em> the first letter is capitalized, emphasized and is the height of 2 rows, text in the next lines will wrap around the initialed letter</p>
+            </div>
+            
+            <pre><code>&lt;blockquote&gt;
+    &lt;p&gt;My grandmother started...&lt;/p&gt;
+    &lt;p class="source"&gt;Ellen DeGeneres&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+            
+            <pre><code>&lt;address&gt;
+    &lt;span class="icon-user"&gt;&lt;/span&gt; Paul Browne&lt;br&gt;
+    &lt;span class="icon-home"&gt;&lt;/span&gt; 123 fake street&lt;br&gt;
+    &lt;span class="icon-empty"&gt;&lt;/span&gt; San Fransisco, CA 90210&lt;br&gt;
+    &lt;span class="icon-phone"&gt;&lt;/span&gt; 01234 567 890
+&lt;/address&gt;</code></pre>
+            
+            <pre><code>&lt;p>&lt;span class="initial">H&lt;/span&gt;ello World! This is an example of an &lt;em&gt;initial&lt;/em&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;span class="initial"&gt;&lt;em&gt;G&lt;/em&gt;&lt;/span&gt;oodbye World! This is another example of an &lt;em&gt;initial&lt;/em&gt;...&lt;/p&gt;</code></pre>
+            
         </div>
-		
-		<hr>
-		
-		<p>some filler</p>
+        
+        <hr class="styled">
+        <!-- grid system -->
+        <div id="grid-system" class="tl-center-7-8">
+            <h4 class="fw-400">Grid System</h4>
+            <p>Unlike most frameworks Curator uses a javascript grid system, instead of one written in CSS. This is because CSS sucks (IMO) at maths</p>
+            <h5>Columns</h5>
+            
+            <div class="xx-col-1-4">
+                <pre><code>&lt;div class="xx-col-1-4"&gt;</code></pre>
+            </div>
+            <div class="xx-col-3-4">
+                <pre><code>&lt;div class="xx-col-3-4"&gt;</code></pre>
+            </div>
+            
+            <div class="xx-col-3-10">
+                <pre><code>&lt;div class="xx-col-3-10"&gt;</code></pre>
+            </div>
+            <div class="xx-col-7-10">
+                <pre><code>&lt;div class="xx-col-7-10"&gt;</code></pre>
+            </div>
+            
+            <div class="xx-col-1-3">
+                <pre><code>&lt;div class="xx-col-1-3"&gt;</code></pre>
+            </div>
+            <div class="xx-col-1-3">
+                <pre><code>&lt;div class="xx-col-1-3"&gt;</code></pre>
+            </div>
+            <div class="xx-col-1-3">
+                <pre><code>&lt;div class="xx-col-1-3"&gt;</code></pre>
+            </div>
+            
+            <div class="xx-col-4-11">
+                <pre><code>&lt;div class="xx-col-4-11"&gt;</code></pre>
+            </div>
+            <div class="xx-col-5-17">
+                <pre><code>&lt;div class="xx-col-5-17"&gt;</code></pre>
+            </div>
+            <div class="xx-col-64-187">
+                <pre><code>&lt;div class="xx-col-64-187"&gt;</code></pre>
+            </div>
+            
+            <h5>offsets</h5>
+            
+            <div class="xx-col-1-3">
+                <pre><code>&lt;div class="xx-col-1-3"&gt;</code></pre>
+            </div>
+            <div class="xx-col-1-3 xx-offset-1-3">
+                <pre><code>&lt;div class="xx-col-1-3 xx-offset-1-3"&gt;</code></pre>
+            </div>
+            
+            <div class="xx-col-4-11">
+                <pre><code>&lt;div class="xx-col-4-11"&gt;</code></pre>
+            </div>
+            <div class="xx-col-64-187 xx-offset-5-17">
+                <pre><code>&lt;div class="xx-col-64-187 xx-offset-5-17"&gt;</code></pre>
+            </div>
+            
+            <div class="xx-col-1-3 xx-offset-1-6">
+                <pre><code>&lt;div class="xx-col-1-3 xx-offset-1-6"&gt;</code></pre>
+            </div>
+            <div class="xx-col-1-3 xx-offset-1-6">
+                <pre><code>&lt;div class="xx-col-1-3 xx-offset-1-6"&gt;</code></pre>
+            </div>
+            
+            <h5>centered</h5>
+            
+            <div class="xx-center-7-8">
+                <pre><code>&lt;div class="xx-center-7-8"&gt;</code></pre>
+            </div>
+            <div class="xx-center-5-7">
+                <pre><code>&lt;div class="xx-center-5-7"&gt;</code></pre>
+            </div>
+            <div class="xx-center-14-29">
+                <pre><code>&lt;div class="xx-center-14-29"&gt;</code></pre>
+            </div>
+        </div>
+        
+        <hr class="styled">
+        <!-- Forms -->
+        <div id="forms" class="tl-center-7-8">
+            <h4 class="fw-400">Forms</h4>
+            <p></p>
+        </div>
 
+        <hr class="styled">
+        <!-- Buttons -->
+        <div id="buttons" class="tl-center-7-8">
+            <h4 class="fw-400">Buttons</h4>
+            <p></p>
+        </div>
+        
+        <hr class="styled">
+        <!-- Tables -->
+        <div id="tables" class="tl-center-7-8">
+            <h4 class="fw-400">Tables</h4>
+            <table class="table" data-sortable>
+                <thead>
+                    <tr>
+                        <th data-sortable="false">Name</th>
+                        <th data-sorted="true">Nationality</th>
+                        <th data-sorted="true">Sales</th>
+                        <th data-sorted="true" data-sorted-direction="descending">Total Value</th>
+                        <th data-sorted="true">Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Johnson</td>
+                        <td>British</td>
+                        <td>6</td>
+                        <td data-value="18500">£12,000</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <td>Paul Paulson</td>
+                        <td>American</td>
+                        <td>5</td>
+                        <td data-value="15000">$15,000</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td>Berti Beiger</td>
+                        <td>German</td>
+                        <td>8</td>
+                        <td data-value="17850">16,000€</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Ivan Drago</td>
+                        <td>Russian</td>
+                        <td>8</td>
+                        <td data-value="14500">900,000 Rubles</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>Zara Zapruda</td>
+                        <td>South African</td>
+                        <td>10</td>
+                        <td data-value="14450">170,000R</td>
+                        <td>33</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <hr class="styled">
+        <!-- Lists -->
+        <div id="lists" class="tl-center-7-8">
+            <h4 class="fw-400">Lists</h4>
+            <div class="tl-col-1-2">
+                <h5>Unorded list</h5>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2
+                        <ul>
+                            <li>Item 2.1</li>
+                            <li>Item 2.2
+                                <ul>
+                                    <li>Item 2.2.1</li>
+                                    <li>Item 2.2.2</li>
+                                    <li>Item 2.2.3</li>
+                                </ul>
+                            </li>
+                            <li>Item 2.3</li>
+                        </ul>
+                    </li>
+                    <li>Item 3</li>
+                </ul>
+                <pre><code>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Item 2.1&lt;/li&gt;
+      &lt;li&gt;Item 2.2
+        &lt;ul&gt;
+          &lt;li&gt;Item 2.2.1&lt;/li&gt;
+          &lt;li&gt;Item 2.2.2&lt;/li&gt;
+          &lt;li&gt;Item 2.2.3&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Item 2.3&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+            
+            <div class="tl-col-1-2">
+                <h5>Orded list</h5>
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2
+                        <ol>
+                            <li>Item 2.1</li>
+                            <li>Item 2.2
+                                <ol>
+                                    <li>Item 2.2.1</li>
+                                    <li>Item 2.2.2</li>
+                                    <li>Item 2.2.3</li>
+                                </ol>
+                            </li>
+                            <li>Item 2.3</li>
+                        </ol>
+                    </li>
+                    <li>Item 3</li>
+                </ol>
+                <pre><code>&lt;ol&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ol&gt;
+      &lt;li&gt;Item 2.1&lt;/li&gt;
+      &lt;li&gt;Item 2.2
+        &lt;ol&gt;
+          &lt;li&gt;Item 2.2.1&lt;/li&gt;
+          &lt;li&gt;Item 2.2.2&lt;/li&gt;
+          &lt;li&gt;Item 2.2.3&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Item 2.3&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </div>
+            
+        </div>
+        
+        <hr class="styled">
+        <!-- Tooltips -->
+        <div id="tooltips" class="tl-center-7-8">
+            <h4 class="fw-400">Tooltips</h4>
+            <p>A tooltip is usually a snippet of <b class="hint--bottom hint--rounded" data-hint="when you hover over it">extra text that appears</b>, similar in a way to the <abbr title="abbreviation">abbr</abbr> element, but with style</p>
+            
+            <pre><code>&lt;b class="hint--bottom hint--rounded" data-hint="when you hover over it"&gt;extra text that appears&lt;/b&gt;</code></pre>
+        </div>
+        
+        <hr class="styled">
+        <!-- Videos -->
+        <div id="videos" class="tl-center-7-8">
+            <h4 class="fw-400">Videos</h4>
+            <div class="video tl-col-1-2">
+                <iframe src="//www.youtube.com/embed/j2tE-BCwZtw?rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="tl-col-1-2">
+                <pre><code>&lt;div class="video tl-col-1-2"&gt;
+    &lt;iframe src="//www.youtube.com/embed/j2tE-BCwZtw?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+            </div>   
+        </div>
+        
+        <hr class="styled">
+        <!-- iconfont -->
+        <div id="iconfont" class="tl-center-7-8">
+            <h4 class="fw-400">Iconfont</h4>
+            <table class="table tl-col-1-2">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Symbol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;span class="icon-twitter"&gt;</code></td>
+                        <td><span class="icon-twitter"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-clock"&gt;</code></td>
+                        <td><span class="icon-clock"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-home"&gt;</code></td>
+                        <td><span class="icon-home"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-phone"&gt;</code></td>
+                        <td><span class="icon-phone"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-calendar-empty"&gt;</code></td>
+                        <td><span class="icon-calendar-empty"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-pencil"&gt;</code></td>
+                        <td><span class="icon-pencil"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-pencil-alt"&gt;</code></td>
+                        <td><span class="icon-pencil-alt"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-bookmark"&gt;</code></td>
+                        <td><span class="icon-bookmark"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-heart-empty"&gt;</code></td>
+                        <td><span class="icon-heart-empty"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-heart"&gt;</code></td>
+                        <td><span class="icon-heart"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-attention"&gt;</code></td>
+                        <td><span class="icon-attention"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-attention-alt"&gt;</code></td>
+                        <td><span class="icon-attention-alt"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-mail"&gt;</code></td>
+                        <td><span class="icon-mail"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-camera"&gt;</code></td>
+                        <td><span class="icon-camera"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-location"&gt;</code></td>
+                        <td><span class="icon-location"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-key"&gt;</code></td>
+                        <td><span class="icon-key"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-menu"&gt;</code></td>
+                        <td><span class="icon-menu"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-link"&gt;</code></td>
+                        <td><span class="icon-link"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-tag"&gt;</code></td>
+                        <td><span class="icon-tag"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-attach"&gt;</code></td>
+                        <td><span class="icon-attach"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-circle-thin"&gt;</code></td>
+                        <td><span class="icon-circle-thin"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-circle-empty"&gt;</code></td>
+                        <td><span class="icon-circle-empty"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-ellipsis"&gt;</code></td>
+                        <td><span class="icon-ellipsis"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-ellipsis-vert"&gt;</code></td>
+                        <td><span class="icon-ellipsis-vert"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-credit-card"&gt;</code></td>
+                        <td><span class="icon-credit-card"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-search"&gt;</code></td>
+                        <td><span class="icon-search"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-sliders"&gt;</code></td>
+                        <td><span class="icon-sliders"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-cog-alt"&gt;</code></td>
+                        <td><span class="icon-cog-alt"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-picture"&gt;</code></td>
+                        <td><span class="icon-picture"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-flag"&gt;</code></td>
+                        <td><span class="icon-flag"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-print"&gt;</code></td>
+                        <td><span class="icon-print"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-smile"&gt;</code></td>
+                        <td><span class="icon-smile"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-frown"&gt;</code></td>
+                        <td><span class="icon-frown"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table tl-col-1-2">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Symbol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;span class="icon-github-circled"&gt;</code></td>
+                        <td><span class="icon-github-circled"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-facebook"&gt;</code></td>
+                        <td><span class="icon-facebook"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-user"&gt;</code></td>
+                        <td><span class="icon-user"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-quote"&gt;</code></td>
+                        <td><span class="icon-quote"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-comment-empty"&gt;</code></td>
+                        <td><span class="icon-comment-empty"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-star-empty"&gt;</code></td>
+                        <td><span class="icon-star-empty"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-star"&gt;</code></td>
+                        <td><span class="icon-star"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-info"&gt;</code></td>
+                        <td><span class="icon-info"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-info-circled"&gt;</code></td>
+                        <td><span class="icon-info-circled"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-ok"&gt;</code></td>
+                        <td><span class="icon-ok"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-cancel"&gt;</code></td>
+                        <td><span class="icon-cancel"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-thumbs-up"&gt;</code></td>
+                        <td><span class="icon-thumbs-up"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-thumbs-down"&gt;</code></td>
+                        <td><span class="icon-thumbs-down"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-sort"&gt;</code></td>
+                        <td><span class="icon-sort"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-sort-down"&gt;</code></td>
+                        <td><span class="icon-sort-down"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-sort-up"&gt;</code></td>
+                        <td><span class="icon-sort-up"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-down-open"&gt;</code></td>
+                        <td><span class="icon-down-open"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-left-open"&gt;</code></td>
+                        <td><span class="icon-left-open"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-right-open"&gt;</code></td>
+                        <td><span class="icon-right-open"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-up-open"&gt;</code></td>
+                        <td><span class="icon-up-open"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-paper-plane"&gt;</code></td>
+                        <td><span class="icon-paper-plane"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-login"&gt;</code></td>
+                        <td><span class="icon-login"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-logout"&gt;</code></td>
+                        <td><span class="icon-logout"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-plus"&gt;</code></td>
+                        <td><span class="icon-plus"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-minus"&gt;</code></td>
+                        <td><span class="icon-minus"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-basket"&gt;</code></td>
+                        <td><span class="icon-basket"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-building-filled"&gt;</code></td>
+                        <td><span class="icon-building-filled"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-download"&gt;</code></td>
+                        <td><span class="icon-download"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-upload"&gt;</code></td>
+                        <td><span class="icon-upload"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-upload-cloud"&gt;</code></td>
+                        <td><span class="icon-upload-cloud"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-linkedin"&gt;</code></td>
+                        <td><span class="icon-linkedin"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-share"&gt;</code></td>
+                        <td><span class="icon-share"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span class="icon-floppy"&gt;</code></td>
+                        <td><span class="icon-floppy"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>        
+        
 
         
+        <hr class="styled">
+        <!-- Utilities -->
+        <div id="utilities" class="tl-center-7-8">
+            <h4 class="fw-400">Utilities</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Example</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;h3 class="fw-300"&gt;</code></td>
+                        <td><h3 class="fw-300">Hello World</h3></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;h3 class="fw-400"&gt;</code></td>
+                        <td><h3 class="fw-400">Hello World</h3></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;h3&gt;</code></td>
+                        <td><h3>Hello World</h3></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        
+        
+            
         <!-- google analytics, uncomment if needed, and change the UA-XXXXX-X -->
         <!--<script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-XXXXX-X','auto');ga('send','pageview');</script>-->
         
+        
+        
+        <script>init();</script>
+        <script>
+            jQuery(document).ready(function($) {
+                hljs.initHighlighting();   
+            }); 
+        </script>
         </body>
 </html>
