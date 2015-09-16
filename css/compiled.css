@@ -617,11 +617,11 @@ form ul label {
 [data-collapse-summary] a:after {
     vertical-align: middle;
     font-family: iconfont;
-    content: "\2e";
+    content: "\00a0\e81f";
 }
 
 [data-collapse-summary].open a:after {
-    content: "\2c";
+    content: "\00a0\e822";
 }
 
 

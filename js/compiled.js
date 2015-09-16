@@ -39,12 +39,20 @@
 $(function() {
   init();
   $('input').iCheck({checkboxClass: 'icheckbox_flat-blue',radioClass: 'iradio_flat-blue'}); 
-  $(".video").fitVids();
+  //$(".video").fitVids();
   $("#header").headroom();
+  $('textarea').elasticize();
+    
+    $("#res-img").bind("opened", function() {
+      init();
+    });
+
+    $("#videos").one("opened", function() {
+      $(".video").fitVids();
+    });
   
   /*
   $('.datepicker').pickadate();
   $('.timepicker').pickatime();
-  $('textarea').elasticize();
   */
 });
