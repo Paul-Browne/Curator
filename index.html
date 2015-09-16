@@ -347,14 +347,69 @@
         <!-- Forms -->
         <div id="forms" class="tl-center-7-8">
             <h4 class="fw-400">Forms</h4>
-            <p></p>
+            <form>
+              <div class="row">
+                <div class="tl-col-1-2">
+                  <label for="name">Name</label>
+                  <input type="text" placeholder="" id="name">
+                </div>
+                <div class="tl-col-1-2">
+                  <label for="email">Your email</label>
+                  <input type="email" placeholder="larry@gmail.com" id="email">
+                </div>
+                <div class="tl-col-1-2">
+                  <label for="password">Password</label>
+                  <input type="password" id="password">
+                </div>
+                <div class="tl-col-1-2">
+                  <label for="passwordconfirm">Password again</label>
+                  <input type="password" id="passwordconfirm">
+                </div>
+              </div>
+              <div class="tl-center-1-1">
+                <label for="message">Message</label>
+                <textarea placeholder="type..." id="message"></textarea>
+                  <ul class="">
+                    <li>
+                      <label for="accept">Accept the terms and conditions?</label>
+                      <input id="accept" type="checkbox">
+                    </li>
+                  </ul>
+                <button class="button-primary" type="submit">send <span class="icon-paper-plane"></span></button>
+              </div>
+            </form>
         </div>
 
         <hr class="styled">
         <!-- Buttons -->
         <div id="buttons" class="tl-center-7-8">
             <h4 class="fw-400">Buttons</h4>
-            <p></p>
+            <div class="center-text">
+                <a class="button" href="#">Anchor button</a>
+                <button>Button element</button>
+                <input type="submit" value="submit input">
+                <input type="button" value="button input">
+            </div>
+            <div class="center-text">
+                <a class="button" href="#">Send <span class="icon-paper-plane"></span></a>
+                <button class="button-blue">tweet <span class="icon-twitter"></span></button>
+                <a class="button button-green" href="#">Accept <span class="icon-ok"></span></a>
+                <button class="button-red">delete <span class="icon-cancel"></span></button>
+            </div>
+            
+            <pre><code>&lt;div class="center-text"&gt;
+    &lt;a class="button" href="#"&gt;Anchor button&lt;/a&gt;
+    &lt;button&gt;Button element&lt;/button&gt;
+    &lt;input type="submit" value="submit input"&gt;
+    &lt;input type="button" value="button input"&gt;
+&lt;/div&gt;
+&lt;div class="center-text"&gt;
+    &lt;a class="button" href="#"&gt;Send &lt;span class="icon-paper-plane"&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;button class="button-blue"&gt;tweet &lt;span class="icon-twitter"&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;a class="button button-green" href="#"&gt;Accept &lt;span class="icon-ok"&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;button class="button-red"&gt;delete &lt;span class="icon-cancel"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            
         </div>
         
         <hr class="styled">
@@ -490,8 +545,30 @@
   &lt;li&gt;Item 3&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
             </div>
-            
         </div>
+        
+        
+        <hr class="styled">
+        <!-- Responsive Images -->
+        <div id="res-img" class="tl-center-7-8">
+            <h4 class="fw-400">Responsive Images</h4>
+            
+            <img src = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs="
+            data-src = "<400:images/butterfly.jpg,
+                        <800:images/kitten.jpg,
+                        <1200:images/dogs.jpg,
+                        <1600:images/horse.jpg,
+                        >1600:images/elephant.jpg" />
+            
+            <pre><code>&lt;img src = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs="
+data-src = "&lt;400:images/butterfly.jpg,
+            &lt;800:images/kitten.jpg,
+            &lt;1200:images/dogs.jpg,
+            &lt;1600:images/horse.jpg,
+            &gt;1600:images/elephant.jpg" /&gt;</code></pre>
+            
+            <p><span class="icon-info-circled icon-color"></span> All pictures from <a href="https://pixabay.com/">Pixabay</a></p>
+        </div>    
         
         <hr class="styled">
         <!-- Tooltips -->
@@ -500,6 +577,7 @@
             <p>A tooltip is usually a snippet of <b class="hint--bottom hint--rounded" data-hint="when you hover over it">extra text that appears</b>, similar in a way to the <abbr title="abbreviation">abbr</abbr> element, but with style</p>
             
             <pre><code>&lt;b class="hint--bottom hint--rounded" data-hint="when you hover over it"&gt;extra text that appears&lt;/b&gt;</code></pre>
+            <p><span class="icon-attention icon-color"></span> Never use a tooltip to reveal important information, since it is impossible to <q>hover</q> on mobile devices</p>
         </div>
         
         <hr class="styled">
@@ -510,10 +588,13 @@
                 <iframe src="//www.youtube.com/embed/j2tE-BCwZtw?rel=0" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="tl-col-1-2">
-                <pre><code>&lt;div class="video tl-col-1-2"&gt;
+                <p>To make video embeds fluid, Curator uses the jQuery plugin <a href="http://fitvidsjs.com/">Fitvids</a></p>
+                <p>Simply add the class <code>video</code> to a container around the <code>&lt;iframe&gt;</code> and the plugin will make your video embeds resize responsively.</p>
+            </div>
+            <br>
+            <pre><code>&lt;div class="video tl-col-1-2"&gt;
     &lt;iframe src="//www.youtube.com/embed/j2tE-BCwZtw?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;</code></pre>
-            </div>   
         </div>
         
         <hr class="styled">
@@ -530,7 +611,7 @@
                 <tbody>
                     <tr>
                         <td><code>&lt;span class="icon-twitter"&gt;</code></td>
-                        <td><span class="icon-twitter"></span></td>
+                        <td><span class="icon-twitter icon-color"></span></td>
                     </tr>
                     <tr>
                         <td><code>&lt;span class="icon-clock"&gt;</code></td>

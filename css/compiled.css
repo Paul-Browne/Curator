@@ -108,7 +108,7 @@ hr.styled {
 /* =============== */
 
 body{font-size:16px;line-height:1.4;color:#4d4d4d;font-family:'Open Sans',Helvetica,Arial;font-weight:400}
-address,blockquote,dl,figure,h1,h2,h3,h4,h5,h6,menu,ol,p,pre,table,table caption,ul{margin:0 0 1em;font-weight:inherit}
+address,blockquote,.button,dl,figure,h1,h2,h3,h4,h5,h6,menu,ol,p,pre,table,table caption,ul{margin:0 0 1em;font-weight:inherit}
 a,a:visited{text-decoration:none;color:#37F}
 a:link,a:visited:link{-webkit-tap-highlight-color:rgba(0,0,0,.3)}
 .h1 a,.h1 a:visited,.h2 a,.h2 a:visited,.h3 a,.h3 a:visited,a.h1,a.h1:visited,a.h2,a.h2:visited,a.h3,a.h3:visited,h1 a,h1 a:visited,h2 a,h2 a:visited,h3 a,h3 a:visited{color:inherit}
@@ -122,7 +122,7 @@ p a,p a:visited{outline:0;border-bottom:1px solid transparent}
 .h4,h4{font-size:1.275em;margin:0 0 .8em}
 .h5,h5{font-size:.784em;text-transform:uppercase;letter-spacing:1.5px}
 .h6,h6{font-size:.615em}
-blockquote{font-size:1.2em;margin-left:0}
+blockquote{font-size:1.1em;margin-left:0}
 blockquote:before{float:left;content:'\e806';font-family:'iconfont';font-style:normal;font-size:3.5em;line-height:1em;margin:-0.05em 0.15em -0.3em 0;opacity:.35;padding:1px}
 blockquote .source{font-family:'Open Sans',helvetica,sans;font-style:normal}
 blockquote .source:before{content:'\2015\2015\00a0\00a0';opacity:.35;letter-spacing: -1px;}
@@ -143,7 +143,7 @@ span.initial{float:left;font-size:3.2em;margin:-0.05em 0.15em -0.3em 0;line-heig
   font-style: normal;
 }
  
- [class^="icon-"]:before, [class*=" icon-"]:before {
+ [class*="icon-"]:before {
   font-family: "iconfont";
   font-style: normal;
   font-weight: normal;
@@ -238,14 +238,39 @@ span.initial{float:left;font-size:3.2em;margin:-0.05em 0.15em -0.3em 0;line-heig
 .icon-share:before { content: '\e83f'; }
 .icon-floppy:before { content: '\e840'; }
 .icon-pencil:before { content: '\e841'; }
-
 .icon-empty:before { content:' '; width:22px; }
+
+.icon-twitter.icon-color:before {color:#55acee; }
+.icon-facebook.icon-color:before,
+.icon-thumbs-up.icon-color:before,
+.icon-thumbs-down.icon-color:before {color:#3b5998; }
+.icon-linkedin.icon-color:before {color:#0077b5; }
+.icon-github-circled.icon-color:before {color:#666666; }
+.icon-cancel.icon-color:before,
+.icon-attention.icon-color:before,
+.icon-attention-alt.icon-color:before{color:#EA3C37; }
+.icon-info.icon-color:before,
+.icon-info-circled.icon-color:before {color:#1DA8D3; }
+.icon-star.icon-color:before {color:#FFED00; }
+.icon-heart.icon-color:before {color:#FF9CED; }
+.icon-ok.icon-color:before {color:#52B552; }
+
+
+.icon-red:before { color: #EA3C37}
+.icon-blue:before { color: #33C3F0}
+.icon-green:before { color: #52B552}
+.icon-white:before { color: #fff}
 
 .icons a:hover{border-bottom:0;}
 
+button [class*="icon-"]:before,
+a.button [class*="icon-"]:before {
+    font-size: 15px;
+}
+
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button,
+a.button,
 button,
 input[type="submit"],
 input[type="reset"],
@@ -258,7 +283,7 @@ input[type="button"] {
   font-size: 11px;
   font-weight: 600;
   line-height: 38px;
-  letter-spacing: .1rem;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
@@ -266,7 +291,10 @@ input[type="button"] {
   border-radius: 4px;
   border: 1px solid #bbb;
   cursor: pointer;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
 .button:hover,
 button:hover,
 input[type="submit"]:hover,
@@ -279,28 +307,151 @@ input[type="reset"]:focus,
 input[type="button"]:focus {
   color: #333;
   border-color: #888;
-  outline: 0; }
-.button.button-primary,
-button.button-primary,
-input[type="submit"].button-primary,
-input[type="reset"].button-primary,
-input[type="button"].button-primary {
+  outline: 0; 
+}
+
+.button.button-blue,
+button.button-blue,
+input[type="submit"].button-blue,
+input[type="reset"].button-blue,
+input[type="button"].button-blue {
   color: #FFF;
   background-color: #33C3F0;
-  border-color: #33C3F0; }
-.button.button-primary:hover,
-button.button-primary:hover,
-input[type="submit"].button-primary:hover,
-input[type="reset"].button-primary:hover,
-input[type="button"].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
+  border-color: #33C3F0;
+}
+.button.button-blue:hover,
+button.button-blue:hover,
+input[type="submit"].button-blue:hover,
+input[type="reset"].button-blue:hover,
+input[type="button"].button-blue:hover,
+.button.button-blue:focus,
+button.button-blue:focus,
+input[type="submit"].button-blue:focus,
+input[type="reset"].button-blue:focus,
+input[type="button"].button-blue:focus {
   color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB; }
+  background-color: #1DA8D3;
+  border-color: #1DA8D3;
+}
+
+.button.button-red,
+button.button-red,
+input[type="submit"].button-red,
+input[type="reset"].button-red,
+input[type="button"].button-red {
+  color: #FFF;
+  background-color: #EA3C37;
+  border-color: #EA3C37;
+}
+.button.button-red:hover,
+button.button-red:hover,
+input[type="submit"].button-red:hover,
+input[type="reset"].button-red:hover,
+input[type="button"].button-red:hover,
+.button.button-red:focus,
+button.button-red:focus,
+input[type="submit"].button-red:focus,
+input[type="reset"].button-red:focus,
+input[type="button"].button-red:focus {
+  color: #FFF;
+  background-color: #CD2823;
+  border-color: #CD2823;
+}
+
+
+.button.button-green,
+button.button-green,
+input[type="submit"].button-green,
+input[type="reset"].button-green,
+input[type="button"].button-green {
+  color: #FFF;
+  background-color: #52B552;
+  border-color: #52B552;
+}
+.button.button-green:hover,
+button.button-green:hover,
+input[type="submit"].button-green:hover,
+input[type="reset"].button-green:hover,
+input[type="button"].button-green:hover,
+.button.button-green:focus,
+button.button-green:focus,
+input[type="submit"].button-green:focus,
+input[type="reset"].button-green:focus,
+input[type="button"].button-green:focus {
+  color: #FFF;
+  background-color: #4B8B4B;
+  border-color: #4B8B4B;
+}
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  width:100%;
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; 
+}
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; 
+}
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; 
+}
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; 
+}
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; 
+}
+fieldset {
+  padding: 0;
+  border-width: 0; 
+}
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; 
+}
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; 
+}
 
 /* ============= */
 /* custom styles */
@@ -378,19 +529,19 @@ table.center-text th {
 
 /* iCheck plugin Flat skin, blue
 ----------------------------------- */
-ul.checklist {
+form ul {
 	font-size:16px;
 	line-height:20px;
 	list-style-type: none;
 	padding: 0;
 }
-.checklist li {
+form li {
 	position: relative;
 	padding-left: 40px;
 	margin-top: 8px;
 	margin-bottom: 8px;
 }
-.checklist label {
+form ul label {
 	padding: 0;
 }
 
