@@ -1,3 +1,50 @@
+@font-face {
+    font-family: 'redacted_scriptregular';
+    src: url('../fonts/redacted-script-regular.eot');
+    src: url('../fonts/redacted-script-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/redacted-script-regular.woff') format('woff'),
+         url('../fonts/redacted-script-regular.ttf') format('truetype'),
+         url('../fonts/redacted-script-regular.svg#redacted_scriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#displaced,
+#columns,
+#nested,
+#offsets,
+#centered{
+    font-family: 'redacted_scriptregular';
+}
+
+#columns [class*="-col-"],
+#offsets [class*="-col-"],
+#nested [class*="-col-"],
+#centered [class*="-center-"]{
+    background: lightblue;
+    margin-bottom:5px;
+}
+
+#nested [class*="-col-"] [class*="-col-"]{
+    background: beige;
+    margin-bottom:5px;
+}
+
+#nested [class*="-col-"] [class*="-col-"] [class*="-center-"]{
+    background: skyblue;
+    margin-bottom:5px;
+}
+
+#displaced .xx-center-4-5 > p,
+#displaced .xx-center-4-5 > h3 {
+    background: lightblue;
+}
+
+#displaced [class*="-left-"],
+#displaced [class*="-right-"] {
+    background: mediumaquamarine;   
+}
+
 .middlize h1 { margin-bottom:0; }
 
 nav {
@@ -66,18 +113,6 @@ nav ul ul {
 td > * { margin: 0; }
 
 /*==============*/
-
-#grid-system [class*="-col-"],
-#grid-system [class*="-center-"]{
-    text-align: center;
-    padding: 5px 0;
-    margin-bottom: 3px;
-}
-
-#grid-system [class*="-col-"] pre,
-#grid-system [class*="-center-"] pre{
-    margin: 0;
-}
 
 #grid-system h5 {
     margin-top: 1em;
