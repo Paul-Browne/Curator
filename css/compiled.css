@@ -125,7 +125,7 @@ p a,p a:visited{outline:0;border-bottom:1px solid transparent}
 blockquote{font-size:1.1em;margin-left:0}
 blockquote:before{float:left;content:'\e806';font-family:'iconfont';font-style:normal;font-size:3.5em;line-height:1em;margin:-0.05em 0.15em -0.3em 0;opacity:.35;padding:1px}
 blockquote .source{font-family:'Open Sans',helvetica,sans;font-style:normal}
-blockquote .source:before{content:'\2015\2015\00a0\00a0';opacity:.35;letter-spacing: -1px;}
+blockquote .source:before{content:'\e82f\e82f\00a0\00a0';opacity:.35;font-family:iconfont;}
 span.initial{float:left;font-size:3.2em;margin:-0.05em 0.15em -0.3em 0;line-height:1em;text-transform:uppercase}
 
 /* ======== */
@@ -142,8 +142,9 @@ span.initial{float:left;font-size:3.2em;margin:-0.05em 0.15em -0.3em 0;line-heig
   font-weight: normal;
   font-style: normal;
 }
- 
- [class*="icon-"]:before {
+
+span[title="Verified Account"]:before,
+[class*="icon-"]:before {
   font-family: "iconfont";
   font-style: normal;
   font-weight: normal;
@@ -153,6 +154,8 @@ span.initial{float:left;font-size:3.2em;margin:-0.05em 0.15em -0.3em 0;line-heig
   width: 1em;
   margin-right: .2em;
   text-align: center;
+  -webkit-transition: .3s all;
+  transition: .3s all;
   /* opacity: .8; */
  
   /* For safety - reset parent styles, that can break glyph codes*/
@@ -172,73 +175,84 @@ span.initial{float:left;font-size:3.2em;margin:-0.05em 0.15em -0.3em 0;line-heig
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-.icon-twitter:before { content: '\e800'; }
-.icon-facebook:before { content: '\e801'; }
-.icon-github-circled:before { content: '\e802'; }
-.icon-home:before { content: '\e803'; }
-.icon-user:before { content: '\e804'; }
-.icon-phone:before { content: '\e805'; }
-.icon-quote:before { content: '\e806'; }
-.icon-comment-empty:before { content: '\e807'; }
-.icon-calendar-empty:before { content: '\e808'; }
-.icon-pencil-alt:before { content: '\e809'; }
-.icon-bookmark:before { content: '\e80a'; }
-.icon-star-empty:before { content: '\e80b'; }
-.icon-star:before { content: '\e80c'; }
-.icon-heart-empty:before { content: '\e80d'; }
-.icon-heart:before { content: '\e80e'; }
-.icon-info:before { content: '\e80f'; }
-.icon-info-circled:before { content: '\e810'; }
-.icon-attention:before { content: '\e811'; }
-.icon-attention-alt:before { content: '\e812'; }
-.icon-ok:before { content: '\e813'; }
-.icon-cancel:before { content: '\e814'; }
-.icon-mail:before { content: '\e815'; }
-.icon-camera:before { content: '\e816'; }
-.icon-thumbs-up:before { content: '\e817'; }
-.icon-thumbs-down:before { content: '\e818'; }
-.icon-location:before { content: '\e819'; }
-.icon-key:before { content: '\e81a'; }
-.icon-menu:before { content: '\e81b'; }
-.icon-sort:before { content: '\e81c'; }
-.icon-sort-down:before { content: '\e81d'; }
-.icon-sort-up:before { content: '\e81e'; }
-.icon-down-open:before { content: '\e81f'; }
-.icon-left-open:before { content: '\e820'; }
-.icon-right-open:before { content: '\e821'; }
-.icon-up-open:before { content: '\e822'; }
-.icon-link:before { content: '\e823'; }
-.icon-tag:before { content: '\e824'; }
-.icon-attach:before { content: '\e825'; }
-.icon-circle-thin:before { content: '\e826'; }
-.icon-circle-empty:before { content: '\e827'; }
-.icon-ellipsis:before { content: '\e828'; }
-.icon-ellipsis-vert:before { content: '\e829'; }
-.icon-paper-plane:before { content: '\e82a'; }
-.icon-login:before { content: '\e82b'; }
-.icon-logout:before { content: '\e82c'; }
-.icon-credit-card:before { content: '\e82d'; }
-.icon-search:before { content: '\e82e'; }
-.icon-plus:before { content: '\e82f'; }
-.icon-minus:before { content: '\e830'; }
-.icon-basket:before { content: '\e831'; }
-.icon-building-filled:before { content: '\e832'; }
-.icon-sliders:before { content: '\e833'; }
-.icon-cog-alt:before { content: '\e834'; }
-.icon-picture:before { content: '\e835'; }
-.icon-flag:before { content: '\e836'; }
-.icon-print:before { content: '\e837'; }
-.icon-linkedin:before { content: '\e838'; }
-.icon-download:before { content: '\e839'; }
-.icon-upload:before { content: '\e83a'; }
-.icon-upload-cloud:before { content: '\e83b'; }
-.icon-smile:before { content: '\e83c'; }
-.icon-frown:before { content: '\e83d'; }
-.icon-clock:before { content: '\e83e'; }
-.icon-share:before { content: '\e83f'; }
-.icon-floppy:before { content: '\e840'; }
-.icon-pencil:before { content: '\e841'; }
-.icon-empty:before { content:' '; width:22px; }
+.icon-twitter:before { content: '\e800'; } /* '' */
+.icon-facebook:before { content: '\e801'; } /* '' */
+.icon-github-circled:before { content: '\e802'; } /* '' */
+.icon-home:before { content: '\e803'; } /* '' */
+.icon-user:before { content: '\e804'; } /* '' */
+.icon-phone:before { content: '\e805'; } /* '' */
+.icon-quote:before { content: '\e806'; } /* '' */
+.icon-comment-empty:before { content: '\e807'; } /* '' */
+.icon-menu:before { content: '\e808'; } /* '' */
+.icon-key:before { content: '\e809'; } /* '' */
+.icon-location:before { content: '\e80a'; } /* '' */
+.icon-thumbs-down:before { content: '\e80b'; } /* '' */
+.icon-thumbs-up:before { content: '\e80c'; } /* '' */
+.icon-camera:before { content: '\e80d'; } /* '' */
+.icon-mail:before { content: '\e80e'; } /* '' */
+.icon-cancel:before { content: '\e80f'; } /* '' */
+.icon-ellipsis:before { content: '\e810'; } /* '' */
+.icon-ellipsis-vert:before { content: '\e811'; } /* '' */
+.icon-frown:before { content: '\e812'; } /* '' */
+.icon-smile:before { content: '\e813'; } /* '' */
+.icon-clock:before { content: '\e814'; } /* '' */
+.icon-share:before { content: '\e815'; } /* '' */
+.icon-floppy:before { content: '\e816'; } /* '' */
+.icon-pencil:before { content: '\e817'; } /* '' */
+.icon-retweet:before { content: '\e818'; } /* '' */
+.icon-search:before { content: '\e819'; } /* '' */
+.icon-credit-card:before { content: '\e81a'; } /* '' */
+.icon-logout:before { content: '\e81b'; } /* '' */
+.icon-login:before { content: '\e81c'; } /* '' */
+.icon-paper-plane:before { content: '\e81d'; } /* '' */
+.icon-plus:before { content: '\e81e'; } /* '' */
+.icon-minus:before { content: '\e81f'; } /* '' */
+.icon-gplus:before { content: '\e820'; } /* '' */
+.icon-reply:before { content: '\e821'; } /* '' */
+.icon-pinterest:before { content: '\e822'; } /* '' */
+.icon-ampersand:before { content: '\e823'; } /* '' */
+.icon-building-filled:before { content: '\e824'; } /* '' */
+.icon-basket:before { content: '\e825'; } /* '' */
+.icon-sort:before { content: '\e826'; } /* '' */
+.icon-sort-down:before { content: '\e827'; } /* '' */
+.icon-sort-up:before { content: '\e828'; } /* '' */
+.icon-forward:before { content: '\e829'; } /* '' */
+.icon-pencil-alt:before { content: '\e82a'; } /* '' */
+.icon-bookmark:before { content: '\e82b'; } /* '' */
+.icon-star-empty:before { content: '\e82c'; } /* '' */
+.icon-down-open:before { content: '\e82d'; } /* '' */
+.icon-sliders:before { content: '\e82e'; } /* '' */
+.icon-line:before { content: '\e82f'; } /* '' */
+.icon-world:before { content: '\e830'; } /* '' */
+.icon-cog-alt:before { content: '\e831'; } /* '' */
+.icon-left-open:before { content: '\e832'; } /* '' */
+.icon-star:before { content: '\e833'; } /* '' */
+.icon-heart-empty:before { content: '\e834'; } /* '' */
+.icon-right-open:before { content: '\e835'; } /* '' */
+.icon-picture:before { content: '\e836'; } /* '' */
+.icon-calendar:before { content: '\e837'; } /* '' */
+.icon-flag:before { content: '\e838'; } /* '' */
+.icon-up-open:before { content: '\e839'; } /* '' */
+.icon-heart:before { content: '\e83a'; } /* '' */
+.icon-info:before { content: '\e83b'; } /* '' */
+.icon-link:before { content: '\e83c'; } /* '' */
+.icon-print:before { content: '\e83d'; } /* '' */
+.icon-linkedin:before { content: '\e83e'; } /* '' */
+.icon-tag:before { content: '\e83f'; } /* '' */
+.icon-info-circled:before { content: '\e840'; } /* '' */
+.icon-attention:before { content: '\e841'; } /* '' */
+.icon-attach:before { content: '\e842'; } /* '' */
+.icon-download:before { content: '\e843'; } /* '' */
+.icon-upload:before { content: '\e844'; } /* '' */
+.icon-circle-thin:before { content: '\e845'; } /* '' */
+.icon-attention-alt:before { content: '\e846'; } /* '' */
+.icon-ok:before { content: '\e847'; } /* '' */
+.icon-circle-empty:before { content: '\e848'; } /* '' */
+.icon-upload-cloud:before { content: '\e849'; } /* '' */
+.icon-twitter-verified:before,
+[title="Verified Account"]:before { content: '\e84a'; } /* '' */
+
+.icon-empty:before { content: ' '; width: 22px;}
 
 .icon-twitter.icon-color:before {color:#55acee; }
 .icon-facebook.icon-color:before,
@@ -251,9 +265,16 @@ span.initial{float:left;font-size:3.2em;margin:-0.05em 0.15em -0.3em 0;line-heig
 .icon-attention-alt.icon-color:before{color:#EA3C37; }
 .icon-info.icon-color:before,
 .icon-info-circled.icon-color:before {color:#1DA8D3; }
-.icon-star.icon-color:before {color:#FFED00; }
+.icon-star.icon-color:before,
+.icon-star.icon-hover-color:hover:before {color:#ffac33; }
 .icon-heart.icon-color:before {color:#FF9CED; }
 .icon-ok.icon-color:before {color:#52B552; }
+.icon-retweet.icon-color:before,
+.icon-retweet.icon-hover-color:hover:before  {color:#5c913b; }
+.icon-reply.icon-color:before,
+.icon-reply.icon-hover-color:hover:before  {color:#0084B4; }
+
+[title="Verified Account"]:before {color:#4d4d4d; }
 
 
 .icon-red:before { color: #EA3C37}
@@ -467,65 +488,7 @@ label > .label-body {
 
 @media print{blockquote,img,pre,tr{page-break-inside:avoid}*,*:after,*:before{background:0 0!important;color:#000!important;box-shadow:none!important;text-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href)")"}abbr[title]:after{content:" (" attr(title)")"}a[href^="#"]:after,a[href^="javascript:"]:after{content:""}blockquote,pre{border:1px solid #999}thead{display:table-header-group}img{max-width:100%!important}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}}
 
-table {
-  max-width: 100%;
-  background-color: transparent;
-}
-.sortable th {
-    cursor:pointer;
-}
-.sortable th:after{
-    font-size:14px;
-    content:"b";
-    font-family:"iconfont";
-    padding-left:12px;
-}
-th.sorting-asc:after {
-    content:"[";
-}
-th.sorting-desc:after {
-    content:"]";
-}
-.table {
-  width: 100%;
-  margin-bottom: 20px;
-}
-.table thead > tr > th,
-.table tbody > tr > th,
-.table tfoot > tr > th,
-.table thead > tr > td,
-.table tbody > tr > td,
-.table tfoot > tr > td {
-  padding: 8px;
-  line-height: 1.428571429;
-  vertical-align: top;
-  border-top: 1px solid #dddddd;
-}
-.table thead > tr > th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #dddddd;
-  text-align:left;
-}
-.table caption + thead tr:first-child th,
-.table colgroup + thead tr:first-child th,
-.table thead:first-child tr:first-child th,
-.table caption + thead tr:first-child td,
-.table colgroup + thead tr:first-child td,
-.table thead:first-child tr:first-child td {
-  border-top: 0;
-}
-.table tbody + tbody {
-  border-top: 2px solid #dddddd;
-}
-.table .table {
-  background-color: #ffffff;
-}
-.table tbody > tr:hover {
-    background:rgba(0, 255, 0, 0.05);
-}
-table.center-text th {
-  text-align:center;
-}
+
 
 /* iCheck plugin Flat skin, blue
 ----------------------------------- */
@@ -617,11 +580,11 @@ form ul label {
 [data-collapse-summary] a:after {
     vertical-align: middle;
     font-family: iconfont;
-    content: "\00a0\e81f";
+    content: "\00a0\e82d";
 }
 
 [data-collapse-summary].open a:after {
-    content: "\00a0\e822";
+    content: "\00a0\e839";
 }
 
 
@@ -1207,6 +1170,57 @@ form ul label {
 }
 
 
+[class*="twitter-"] ul {
+    list-style:none;
+    padding:0;
+}
+
+[class*="twitter-"] .timePosted a,
+[class*="twitter-"] .interact a,
+[class*="twitter-"] .user a {
+    color: inherit;
+    border-bottom: 0;
+}
+
+[title="Verified Account"] {
+    color:transparent;
+    margin-left: -1.5em;
+}
+
+span[title="Verified Account"]:before {
+  font-family: "iconfont";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  font-size: 100%; 
+
+}
+
+.user a img {
+    float: left;
+    margin-right: 1em;
+}
+.user a img + span {
+    font-weight: 600;
+    display: block;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.user a > span + span {
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+}
 
 /*! Hint.css - v1.3.5 - 2015-06-16
 * http://kushagragour.in/lab/hint/

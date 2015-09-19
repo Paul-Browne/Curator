@@ -157,13 +157,13 @@ th[data-sorted]{
     cursor:pointer;
 }
 table[data-sortable] th[data-sorted]:after{
-    content:"\e81c";
+    content:"\e826";
 }
 table[data-sortable] th[data-sorted="true"][data-sorted-direction="descending"]:after {
-    content:"\e81d";
+    content:"\e827";
 }
 table[data-sortable] th[data-sorted="true"][data-sorted-direction="ascending"]:after {
-    content:"\e81e";
+    content:"\e828";
 }
 th[data-sortable="false"] {
     cursor:default;
