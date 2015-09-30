@@ -144,7 +144,8 @@ span.initial{float:left;font-size:3.2em;margin:-0.05em 0.15em -0.3em 0;line-heig
 }
 
 span[title="Verified Account"]:before,
-[class*="icon-"]:before {
+[class*="icon-"]:before,
+nav .more:before{
   font-family: "iconfont";
   font-style: normal;
   font-weight: normal;
@@ -250,7 +251,7 @@ span[title="Verified Account"]:before,
 .icon-circle-empty:before { content: '\e848'; } /* '' */
 .icon-upload-cloud:before { content: '\e849'; } /* '' */
 .icon-twitter-verified:before,
-[title="Verified Account"]:before { content: '\e84a'; } /* '' */
+[title="Verified Account"]:before { content: '\e84b'; } /* '' */
 
 .icon-empty:before { content: ' '; width: 22px;}
 
@@ -274,7 +275,7 @@ span[title="Verified Account"]:before,
 .icon-reply.icon-color:before,
 .icon-reply.icon-hover-color:hover:before  {color:#0084B4; }
 
-[title="Verified Account"]:before {color:#4d4d4d; }
+[title="Verified Account"]:before {color:#88c9f9; }
 
 
 .icon-red:before { color: #EA3C37}
@@ -291,7 +292,11 @@ a.button [class*="icon-"]:before {
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-a.button,
+a.button {
+ color: #555;   
+}
+
+.button,
 button,
 input[type="submit"],
 input[type="reset"],
@@ -313,6 +318,7 @@ input[type="button"] {
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box;
+  vertical-align: middle;
   -webkit-transition: .3s all;
   transition: .3s all;
 }
@@ -337,8 +343,8 @@ input[type="submit"].button-blue,
 input[type="reset"].button-blue,
 input[type="button"].button-blue {
   color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0;
+  background-color: #41B3D9;
+  border-color: #41B3D9;
 }
 .button.button-blue:hover,
 button.button-blue:hover,
@@ -351,8 +357,8 @@ input[type="submit"].button-blue:focus,
 input[type="reset"].button-blue:focus,
 input[type="button"].button-blue:focus {
   color: #FFF;
-  background-color: #1DA8D3;
-  border-color: #1DA8D3;
+  background-color: #49C8F2;
+  border-color: #49C8F2;
 }
 
 .button.button-red,
@@ -361,8 +367,8 @@ input[type="submit"].button-red,
 input[type="reset"].button-red,
 input[type="button"].button-red {
   color: #FFF;
-  background-color: #EA3C37;
-  border-color: #EA3C37;
+  background-color: #D94141;
+  border-color: #D94141;
 }
 .button.button-red:hover,
 button.button-red:hover,
@@ -375,8 +381,8 @@ input[type="submit"].button-red:focus,
 input[type="reset"].button-red:focus,
 input[type="button"].button-red:focus {
   color: #FFF;
-  background-color: #CD2823;
-  border-color: #CD2823;
+  background-color: #F24949;
+  border-color: #F24949;
 }
 
 
@@ -386,8 +392,8 @@ input[type="submit"].button-green,
 input[type="reset"].button-green,
 input[type="button"].button-green {
   color: #FFF;
-  background-color: #52B552;
-  border-color: #52B552;
+  background-color: #50B350;
+  border-color: #50B350;
 }
 .button.button-green:hover,
 button.button-green:hover,
@@ -400,8 +406,17 @@ input[type="submit"].button-green:focus,
 input[type="reset"].button-green:focus,
 input[type="button"].button-green:focus {
   color: #FFF;
-  background-color: #4B8B4B;
-  border-color: #4B8B4B;
+  background-color: #5ccc5c;
+  border-color: #5ccc5c;
+}
+
+.floating {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 2px 12px 0 rgba(0, 0, 0, 0.2);
+    border:0;
+}
+
+.floating:hover {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 18px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* Forms

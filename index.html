@@ -98,7 +98,22 @@
                                 <li><a>Buttons</a></li>
                                 <li><a>Tables</a></li>
                                 <li><a>Lists</a></li>
-                                <li><a>Slider</a></li>
+                                <li><a>Images</a>
+                                    <ul>
+                                        <li><a>Responsive</a></li>
+                                        <li><a>Slider</a>
+                                            <ul>
+                                                <li><a>something 1</a></li>
+                                                <li><a>something 2</a></li>
+                                                <li><a>something 3</a></li>
+                                                <li><a>something 4</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a>Fig Caption</a></li>
+                                        <li><a>LightBox light box and a chicken</a></li>
+                                    </ul>
+                                </li>
+                                <li><a>zzzzzz</a></li>
                                 <li><a>Videos</a></li>
                                 <li><a>Pop overs</a></li>
                                 <li><a>Navigation</a></li>
@@ -110,6 +125,15 @@
                         <li><a>about</a></li>
                     </ul>
                 </nav>
+            </div>
+        </div>
+        
+        <!-- about -->
+        <div id="about" class="tl-center-7-8" data-collapse>
+            <h4 class="fw-400">About</h4>
+            <div>
+                <h4 class="fw-400"><em>Curator</em> is a frontend framework full of resources that make creating websites, just that little bit easier.</h4>
+                <p><strong>Why?</strong> - As a developer I come across the same requirements in almost every project - a grid system, responsive images, an iconfont, a twitter feed, etc. etc. So I decided to create a framework with the most commonly requested features all bundled in. And the result was this framework I call <em>Curator</em> since the majority of the scripts, styles and best practices are sourced from developers and designers from around the web.</p>
             </div>
         </div>
 
@@ -468,6 +492,19 @@
                 <a class="button button-green" href="#">Accept <span class="icon-ok"></span></a>
                 <button class="button-red">delete <span class="icon-cancel"></span></button>
             </div>
+            <div class="center-text">
+                <span>some text</span>
+                <a class="button floating" href="#">Send <span class="icon-paper-plane"></span></a>
+                <button class="button-blue floating">tweet <span class="icon-twitter"></span></button>
+                <a class="button button-green floating" href="#">Accept <span class="icon-ok"></span></a>
+                <button class="button-red floating">delete <span class="icon-cancel"></span></button>
+            </div>
+            <div class="center-text">
+                <a class="button floating waves" href="#">Send <span class="icon-paper-plane"></span></a>
+                <button class="button-blue floating waves">tweet <span class="icon-twitter"></span></button>
+                <a class="button button-green floating waves" href="#">Accept <span class="icon-ok"></span></a>
+                <button class="button-red floating waves">delete <span class="icon-cancel"></span></button>
+            </div>
             
             <pre><code>&lt;div class="center-text"&gt;
     &lt;a class="button" href="#"&gt;Anchor button&lt;/a&gt;
@@ -647,6 +684,17 @@ data-src = "&lt;400:images/butterfly.jpg,
             
             <p><span class="icon-info-circled icon-color"></span> All pictures from <a href="https://pixabay.com/">Pixabay</a></p>
         </div>  
+        </div>
+        
+        <!-- fig caption -->
+        <div id="fig" class="tl-center-7-8" data-collapse>
+            <h4 class="fw-400">Figure</h4>
+            <div>
+                <figure>
+                    <img src="images/butterfly.jpg" alt="butterfly" width="400">
+                    <figcaption>This is a butterfly</figcaption>
+                </figure>
+            </div>  
         </div>
         
         
@@ -1013,6 +1061,22 @@ data-src = "&lt;400:images/butterfly.jpg,
                 <div class="xx-col-1-2"></div>
             </div>
         </div>
+        
+        <!-- header -->
+        <div id="header" class="tl-center-7-8" data-collapse>
+            <h4 class="fw-400">Header</h4>
+            <div>
+                <p>Adding a twitter feed to your website made easy</p>
+            </div>
+        </div>
+        
+        <!-- collapse -->
+        <div id="collapse" class="tl-center-7-8" data-collapse>
+            <h4 class="fw-400">Collapse</h4>
+            <div>
+                <p><em>Curator</em> is a frontend framework </p>
+            </div>
+        </div>
     
         <!-- Utilities -->
         <div id="utilities" class="tl-center-7-8" data-collapse>
@@ -1023,28 +1087,104 @@ data-src = "&lt;400:images/butterfly.jpg,
                     <tr>
                         <th>Element</th>
                         <th>Example</th>
-                        <th></th>
+                        <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><code>&lt;h3 class="fw-300"&gt;</code></td>
                         <td><h3 class="fw-300">Hello World</h3></td>
-                        <td></td>
+                        <td>gives the text the <code>font-weight: 300</code></td>
                     </tr>
                     <tr>
                         <td><code>&lt;h3 class="fw-400"&gt;</code></td>
                         <td><h3 class="fw-400">Hello World</h3></td>
-                        <td></td>
+                        <td>gives the text the <code>font-weight: 300</code></td>
                     </tr>
                     <tr>
-                        <td><code>&lt;h3&gt;</code></td>
-                        <td><h3>Hello World</h3></td>
-                        <td></td>
+                        <td><code>&lt;h3 class="center-text"&gt;</code></td>
+                        <td><h3 class="center-text">Hello World</h3></td>
+                        <td>Centers the text</td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        </div>
+        
+        <!-- Head -->
+        <div id="head" class="tl-center-7-8" data-collapse>
+            <h4 class="fw-400">&lt;head&gt;</h4>
+            <div>
+                <pre><code>&lt;head&gt;
+    
+    &lt;!-- regular meta stuff --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;add a title&lt;/title&gt;
+    &lt;meta name="description" content="Page description. No longer than 155 characters." /&gt;
+
+    &lt;!-- Twitter Card data --&gt;
+    &lt;meta name="twitter:card" content="summary"&gt;
+    &lt;meta name="twitter:site" content="@publisher_handle"&gt;
+    &lt;meta name="twitter:title" content="Page Title"&gt;
+    &lt;meta name="twitter:description" content="Page description less than 200 characters"&gt;
+    &lt;meta name="twitter:creator" content="@author_handle"&gt;
+    &lt;!-- Twitter Summary card images must be at least 120x120px --&gt;
+    &lt;meta name="twitter:image" content="http://www.example.com/image.jpg"&gt;
+
+    &lt;!-- Open Graph data --&gt;
+    &lt;meta property="og:title" content="Title Here" /&gt;
+    &lt;meta property="og:type" content="article" /&gt;
+    &lt;meta property="og:url" content="http://www.example.com/" /&gt;
+    &lt;meta property="og:image" content="http://example.com/image.jpg" /&gt;
+    &lt;meta property="og:description" content="Description Here" /&gt; 
+    &lt;meta property="og:site_name" content="Site Name, i.e. Moz" /&gt;
+    &lt;meta property="fb:admins" content="Facebook numeric ID" /&gt;
+
+    &lt;!-- Favicons, ipad/pod/phone, android, Windows tiles etc. --&gt;
+    &lt;link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png"&gt;
+    &lt;link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32"&gt;
+    &lt;link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192"&gt;
+    &lt;link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96"&gt;
+    &lt;link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16"&gt;
+    &lt;link rel="manifest" href="/images/favicons/manifest.json"&gt;
+    &lt;link rel="shortcut icon" href="/images/favicons/favicon.ico"&gt;
+    &lt;meta name="msapplication-TileColor" content="#2d89ef"&gt;
+    &lt;meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png"&gt;
+    &lt;meta name="msapplication-config" content="/images/favicons/browserconfig.xml"&gt;
+    &lt;meta name="theme-color" content="#ffffff"&gt;
+
+    &lt;!-- add your styles in here --&gt;
+    &lt;link rel="stylesheet" href="css/compiled.css"&gt;
+
+    &lt;!-- fonts - via google --&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Libre+Baskerville:400italic" rel="stylesheet" type="text/css"&gt;
+
+    &lt;!-- initial-scale='1' bugfix for WP8 and IE10 --&gt;
+    &lt;script&gt;!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile\/10\.0/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();&lt;/script&gt;
+
+    &lt;!-- jQuery --&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
+
+    &lt;!-- modernizr, uncomment if needed --&gt;
+    &lt;!-- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"&gt;&lt;/script&gt; --&gt;
+
+    &lt;!-- html5 shim, if you use modernizr you can remove this --&gt;
+    &lt;!--[if lt IE 9]&gt;&lt;script src="https://cdn.rawgit.com/aFarkas/html5shiv/master/dist/html5shiv.min.js"&gt;&lt;/script&gt;&lt;![endif]--&gt;
+
+    &lt;!-- add you scripts in here --&gt;
+    &lt;script src="js/compiled.js"&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+            </div>
         </div>
         
         <!-- to do -->
@@ -1059,8 +1199,10 @@ data-src = "&lt;400:images/butterfly.jpg,
             nav
             utilities
             TWITTER
+            credit page
 
         -->
+
         
         
             
