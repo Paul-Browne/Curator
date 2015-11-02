@@ -169,10 +169,19 @@ td > * { margin: 0; }
     margin-top: 0;
 }
 
+#bob {
+    color: #eee;
+}
+
+
 
 /*==============*/
 
-.button,button,input[type="submit"],input[type="button"],input[type="reset"] {
+#buttons .button,
+#buttons button,
+#buttons input[type="submit"],
+#buttons input[type="button"],
+#buttons input[type="reset"] {
     margin: 2em;
 }
 

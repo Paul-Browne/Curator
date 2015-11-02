@@ -19,6 +19,14 @@ if (!touch()) {
      q.className += " no-touch";
 }
 
+var targ = document.getElementsByTagName("ul");
+for (var i=0; i<targ.length; i++){
+    
+    if(targ[i].parentNode.nodeName=="li"){    
+        this.className += this.className + " parent"
+    }
+}
+
 var target = $("ul").parent("li");
     target.addClass("bob");
     $(".bob > a").after( "<span class='more'></span>" );

@@ -82,11 +82,11 @@
         <!-- avoiding FOUC -->
         <script>!function(){var a=document.getElementsByTagName("body")[0],b=document.createElement("div");a.appendChild(b),b.id="loader",b.className="loading";var c=document.getElementById("loader");window.onload=function(){c.className="loaded",setTimeout(function(){a.removeChild(c)},1e3)},window.onbeforeunload=function(){a.id="byebye"}}();</script>
 
-        <div class="fullscreen">
+        <div id="bob" class="fullscreen">
             <div class="middlize center-text">
                 <h1><em>Curator</em></h1>
                 <h3 class="fw-300">A frontend framework with resources <del>stolen</del> curated from around the web.</h3>
-                <a class="button button-primary" href="https://github.com/Paul-Browne/Curator">Download</a>
+                <a class="button button-white-text" href="https://github.com/Paul-Browne/Curator">Download</a>
                 <nav class="clearfix">
                     <ul>
                         <li><a>home</a></li>
@@ -713,19 +713,32 @@ data-src = "&lt;400:images/butterfly.jpg,
         <!-- Videos -->
         <div id="videos" class="tl-center-7-8" data-collapse>
             <h4 class="fw-400">Videos</h4>
-            <div>
-            <div class="video tl-col-1-2">
-                <iframe src="//www.youtube.com/embed/j2tE-BCwZtw?rel=0" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="tl-col-1-2">
-                <p>To make video embeds fluid, Curator uses the jQuery plugin <a href="http://fitvidsjs.com/">Fitvids</a></p>
-                <p>Simply add the class <code>video</code> to a container around the <code>&lt;iframe&gt;</code> and the plugin will make your video embeds resize responsively.</p>
-            </div>
-            <br>
-            <pre><code>&lt;div class="video tl-col-1-2"&gt;
+            <div data-collapse>
+                <h5 id="embeds">Embeds</h5>
+                <div>
+                    <div class="video tl-col-1-2">
+                        <iframe src="//www.youtube.com/embed/j2tE-BCwZtw?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="tl-col-1-2">
+                        <p>To make video embeds fluid, Curator uses the jQuery plugin <a href="http://fitvidsjs.com/">Fitvids</a></p>
+                        <p>Simply add the class <code>video</code> to a container around the <code>&lt;iframe&gt;</code> and the plugin will make your video embeds resize responsively.</p>
+                    </div>
+                    <br>
+                    <pre><code>&lt;div class="video tl-col-1-2"&gt;
     &lt;iframe src="//www.youtube.com/embed/j2tE-BCwZtw?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;</code></pre>
-        </div>
+                </div>
+                <h5 id="full-bg-video">Full Background</h5>
+                <div>
+                    <p>The video at the top of the page is an example of a full screen background video</p>
+                    <pre><code>&lt;div class="fullscreen"
+    data-vide-bg="mp4: videos/a-sky-full-of-stars.mp4,
+                  webm: videos/a-sky-full-of-stars.webm,
+                  ogv: videos/a-sky-full-of-stars.ogg, 
+                  poster: videos/a-sky-full-of-stars.gif"
+    data-vide-options="posterType: gif, loop: false, muted: true" &gt;&lt;/div&gt;</code></pre>
+                </div>
+            </div>
         </div>
         
         
@@ -1186,6 +1199,7 @@ data-src = "&lt;400:images/butterfly.jpg,
 &lt;/head&gt;</code></pre>
             </div>
         </div>
+
         
         <!-- to do -->
         <!--
